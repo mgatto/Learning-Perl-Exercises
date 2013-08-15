@@ -50,6 +50,15 @@ sub print20cols {
 #  (Hint: see "Interpolation of Scalar Variables into Strings" on page
 #  32 in Chapter 2, about controlling variable interpolation.) For extra credit,
 #  make the ruler line longer when the selected width is larger.
+sub print_my_cols {
+    my $columns = shift || 20;
+    my @lines = shift;
 
+    say "1234567890" x 4;
+
+    foreach (@lines) {
+        printf "%${columns}s\n", $_;
+    }
+}
 
 1;
